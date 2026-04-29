@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sider - Software Engineer</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Vue CDN -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #0a0a0f;
+      color: #e5e7eb;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .neon {
+      color: #22d3ee;
+      text-shadow: 0 0 8px #22d3ee;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .gradient {
+      background: linear-gradient(135deg, #0f172a, #020617);
+    }
+  </style>
+</head>
+
+<body>
+<div id="app">
+
+  <!-- HERO -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+    <h1 class="text-5xl md:text-7xl font-bold mb-4 neon">Sider</h1>
+    <h2 class="text-xl md:text-2xl text-gray-400 mb-6">Software Engineer</h2>
+
+    <p class="max-w-xl text-gray-300 mb-8">
+      Construyo soluciones, aprendo rápido y me adapto a entornos reales.
+      Combino base técnica con mentalidad de crecimiento para aportar valor desde el primer día.
+    </p>
+
+    <div class="flex gap-4">
+      <a href="#proyectos" class="px-6 py-3 bg-cyan-400 text-black rounded-xl font-semibold hover:scale-105 transition">
+        Ver proyectos
+      </a>
+      <a href="#contacto" class="px-6 py-3 border border-cyan-400 rounded-xl hover:bg-cyan-400 hover:text-black transition">
+        Contactarme
+      </a>
+    </div>
+  </section>
+
+  <!-- SOBRE MI -->
+  <section class="py-20 px-6 max-w-5xl mx-auto" data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-6 neon">Sobre mí</h2>
+    <p class="text-gray-300 leading-relaxed">
+      Soy estudiante de Ingeniería en Informática con una mentalidad enfocada en crecimiento constante,
+      aprendizaje rápido y ejecución. Me adapto con facilidad a nuevas tecnologías y entornos de trabajo,
+      y destaco por mi capacidad de comunicar ideas de forma clara y efectiva.
+      <br><br>
+      No solo busco escribir código: busco entender problemas, proponer soluciones y aportar valor real.
+      Me interesa crecer en entornos profesionales donde pueda aprender, colaborar y mejorar continuamente.
+    </p>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section class="py-20 px-6 gradient" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold mb-10 neon text-center">Habilidades</h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <div class="card p-6 rounded-2xl">
+          <h3 class="text-xl font-semibold mb-4 text-cyan-300">Técnicas</h3>
+          <div class="flex flex-wrap gap-2">
+            <span v-for="tech in techs" class="px-3 py-1 bg-cyan-500/10 border border-cyan-400 rounded-full text-sm">
+              {{ tech }}
+            </span>
+          </div>
+        </div>
+
+        <div class="card p-6 rounded-2xl">
+          <h3 class="text-xl font-semibold mb-4 text-cyan-300">Blandas</h3>
+          <ul class="space-y-2 text-gray-300">
+            <li>✔ Comunicación efectiva</li>
+            <li>✔ Adaptabilidad</li>
+            <li>✔ Pensamiento lógico</li>
+            <li>✔ Aprendizaje rápido</li>
+            <li>✔ Resolución de problemas</li>
+            <li>✔ Trabajo en equipo</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HERRAMIENTAS -->
+  <section class="py-20 px-6 max-w-6xl mx-auto" data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-10 neon text-center">Herramientas & Entorno</h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="card p-4 rounded-xl">VS Code</div>
+      <div class="card p-4 rounded-xl">Git & GitHub</div>
+      <div class="card p-4 rounded-xl">Linux</div>
+      <div class="card p-4 rounded-xl">AWS</div>
+      <div class="card p-4 rounded-xl">PuTTY</div>
+      <div class="card p-4 rounded-xl">Máquinas Virtuales</div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="py-20 px-6 gradient" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold mb-10 neon text-center">Proyectos</h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="card p-6 rounded-2xl hover:scale-105 transition">
+          <h3 class="text-lg font-semibold mb-2">Plataforma Web</h3>
+          <p class="text-gray-400 text-sm">Estructura completa de aplicación web con frontend moderno.</p>
+        </div>
+
+        <div class="card p-6 rounded-2xl hover:scale-105 transition">
+          <h3 class="text-lg font-semibold mb-2">Automatización con Python</h3>
+          <p class="text-gray-400 text-sm">Scripts orientados a optimizar tareas y procesos.</p>
+        </div>
+
+        <div class="card p-6 rounded-2xl hover:scale-105 transition">
+          <h3 class="text-lg font-semibold mb-2">Dashboard</h3>
+          <p class="text-gray-400 text-sm">Visualización de datos con enfoque práctico y funcional.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAYECTORIA -->
+  <section class="py-20 px-6 max-w-5xl mx-auto" data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-6 neon">Trayectoria</h2>
+    <p class="text-gray-300">
+      Actualmente cursando Ingeniería en Informática, desarrollando bases sólidas en programación,
+      sistemas y herramientas modernas de desarrollo.
+      <br><br>
+      Mi enfoque está en aprender haciendo, enfrentando problemas reales y mejorando constantemente
+      tanto mis habilidades técnicas como mi forma de trabajar en equipo.
+    </p>
+  </section>
+
+  <!-- FILOSOFIA -->
+  <section class="py-20 px-6 gradient text-center" data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-6 neon">Mentalidad</h2>
+    <p class="max-w-3xl mx-auto text-gray-300">
+      Creo en aprender rápido, adaptarme y ejecutar. No espero tener todas las respuestas:
+      investigo, pruebo y mejoro. Me interesa aportar valor desde el primer día y crecer dentro
+      de equipos que construyen cosas reales.
+    </p>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="py-20 px-6 text-center" data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-6 neon">Trabajemos juntos</h2>
+
+    <p class="text-gray-300 mb-6">
+      Si buscas a alguien con base técnica, buena comunicación y hambre de crecimiento,
+      estoy listo para aportar.
+    </p>
+
+    <div class="space-y-2 text-gray-400">
+      <p>Email: sid.quiroz@gmail.com</p>
+      <p>GitHub: nanana</p>
+    </div>
+
+    <a href="mailto:sid.quiroz@gmail.com" class="inline-block mt-6 px-6 py-3 bg-cyan-400 text-black rounded-xl font-semibold hover:scale-105 transition">
+      Contactar ahora
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-6 text-center text-gray-500 text-sm border-t border-gray-800">
+    © 2026 Sider — Construyendo, aprendiendo y mejorando cada día.
+  </footer>
+
+</div>
+
+<!-- Vue App -->
+<script>
+const { createApp } = Vue;
+
+createApp({
+  data() {
+    return {
+      techs: [
+        "Python", "HTML", "CSS", "JavaScript",
+        "Git", "GitHub", "AWS",
+        "Linux", "PuTTY", "Máquinas Virtuales"
+      ]
+    }
+  }
+}).mount('#app');
+</script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+</body>
+</html>
